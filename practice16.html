@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Employee Card Stack</title>
+  <link rel="stylesheet" href="./practice16.css" />
+</head>
+<body>
+  <main class="app">
+    <div class="side-buttons">
+      <button id="add-btn" title="Add employee">+</button>
+      <button id="next-btn" title="Next card">&uarr;</button>
+      <button id="prev-btn" title="Previous card">&darr;</button>
+    </div>
+
+    <section class="stack-wrap" id="stack">
+      <div class="empty-card" id="empty-card">
+        <span>No employee cards yet.</span>
+        <span>Press + to add one.</span>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal" id="modal">
+    <form class="form-box" id="employee-form">
+      <div class="form-top">
+        <h1>Add Employee</h1>
+        <button type="button" class="close-btn" id="close-btn">&times;</button>
+      </div>
+
+      <label for="name">Name</label>
+      <input type="text" id="name" required />
+
+      <label for="photo-url">Photo URL</label>
+      <input type="url" id="photo-url" placeholder="https://example.com/photo.jpg" required />
+
+      <label for="age">Age</label>
+      <input type="number" id="age" min="1" required />
+
+      <div class="range-head">
+        <label for="salary">Salary</label>
+        <span id="salary-value">50000</span>
+      </div>
+      <input type="range" id="salary" min="10000" max="200000" step="5000" value="50000" />
+
+      <label>Gender</label>
+      <div class="gender-row">
+        <label><input type="radio" name="gender" value="male" required /> Male</label>
+        <label><input type="radio" name="gender" value="female" required /> Female</label>
+      </div>
+
+      <label for="address">Address</label>
+      <textarea id="address" rows="3" required></textarea>
+
+      <button type="submit" class="submit-btn">Submit</button>
+    </form>
+  </div>
+
+  <script src="./practice16.js"></script>
+</body>
+</html>
